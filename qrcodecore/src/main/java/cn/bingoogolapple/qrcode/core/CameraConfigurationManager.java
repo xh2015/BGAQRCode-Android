@@ -120,7 +120,7 @@ final class CameraConfigurationManager {
                 parameters.setFlashMode(flashMode);
             }
             camera.setParameters(parameters);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
