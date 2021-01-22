@@ -108,7 +108,6 @@ final class CameraConfigurationManager {
 
     private void doSetTorch(Camera camera, boolean newSetting) {
         try {
-            camera.lock();
             Camera.Parameters parameters = camera.getParameters();
             String flashMode;
             /** 是否支持闪光灯 */
@@ -121,7 +120,6 @@ final class CameraConfigurationManager {
                 parameters.setFlashMode(flashMode);
             }
             camera.setParameters(parameters);
-            camera.unlock();
         }catch (Exception e){
             e.printStackTrace();
         }
